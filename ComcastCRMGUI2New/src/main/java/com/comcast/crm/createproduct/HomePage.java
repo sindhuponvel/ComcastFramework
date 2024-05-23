@@ -16,6 +16,13 @@ public class HomePage {
 		PageFactory.initElements(d, this);
 	}
 
+	@FindBy(xpath = "//a[text()='Documents']")
+	private WebElement documentLnk;
+
+	public void setDocumentLnk(WebElement documentLnk) {
+		this.documentLnk = documentLnk;
+	}
+
 	@FindBy(xpath = "//a[text()='Organizations']")
 	private WebElement OrgLnk;
 
@@ -68,6 +75,10 @@ public class HomePage {
 
 	public WebElement getMoreLnk() {
 		return moreLnk;
+	}
+
+	public WebElement getDocumentLnk() {
+		return documentLnk;
 	}
 
 	public WebElement getCampaignLnk() {
